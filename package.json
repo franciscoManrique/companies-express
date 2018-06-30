@@ -1,0 +1,30 @@
+{
+  "name": "13_companies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "DEBUG=companies:* nodemon -e hbs, js app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "seeds": "node bin/seeds"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parse": "^0.4.0",
+    "debug": "^3.1.0",
+    "express": "^4.16.3",
+    "hbs": "^4.0.1",
+    "http-errors": "^1.6.3",
+    "moment": "^2.22.2",
+    "mongoose": "^5.1.7",
+    "morgan": "^1.9.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0",
+    "nodemon": "^1.17.5"
+  }
+}
