@@ -12,3 +12,9 @@ module.exports.list = (req, res, next) => {
     })
     .catch(error=>next(createError(404, 'Error 404. Sorry, companies not found')));
 };
+
+// module.exports.create = (req, res, next) => {
+//     .then(() =>{
+//         res.render('companyForm', )
+//     })
+// }
