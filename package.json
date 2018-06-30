@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "DEBUG=companies:* nodemon -e hbs, js app.js",
+    "dev": "DEBUG=companies:* nodemon -e hbs,js app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "seeds": "node bin/seeds"

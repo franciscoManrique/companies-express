@@ -1,12 +1,14 @@
 const createError = require("http-errors");
 const mongoose = require("mongoose");
 
-const Company = "../models/company.model";
+const Company = require("../models/company.model");
 
 module.exports.list = (req, res, next) => {
   Company.find()
-    .then(companies=>{
-        res.render('home', );
+    .then(companies =>{
+            res.render('home', {
+                companies
+            });
     })
-    .catch();
+    .catch(error=>next(createError(404, 'Error 404. Sorry, companies not found')));
 };
