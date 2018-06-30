@@ -13,8 +13,25 @@ module.exports.list = (req, res, next) => {
     .catch(error=>next(createError(404, 'Error 404. Sorry, companies not found')));
 };
 
-// module.exports.create = (req, res, next) => {
-//     .then(() =>{
-//         res.render('companyForm', )
-//     })
-// }
+module.exports.create = (req, res, render)=>{
+    res.render('newCompany', {
+        form: new Company()
+    });
+};
+
+//AQUI NOS QUEDAMOS//
+
+// module.exports.doCreate = (req, res, render)=>{
+//     const company = new Company(req.body);
+//     company.save()
+//     .then(() => res.redirect('/companies'))
+//     .catch(error => {
+//         if (error instanceof mongoose.Error.ValidationError){
+//             console.log(`
+//         )
+//         }
+//     }
+// };
+
+ 
+
