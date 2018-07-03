@@ -6,7 +6,7 @@ const Company = require("../models/company.model");
 module.exports.list = (req, res, next) => {
   Company.find()
     .then(companies =>{
-            res.render('home', {
+            res.render('companies/home', {
                 companies
             });
     })
