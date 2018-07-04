@@ -1,0 +1,25 @@
+{{!-- FORMA 2: 2. hago dataset de json errors y despues voy a layout y pongo mi js --}}
+
+<form data-errors = "{{{ json errors }}}" method="POST" action={{#if this.isNew}}"/companies/create"{{else}}"/companies/{{this.id}}/update"{{/if}}>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" class="form-control" placeholder="Name" name="name" value="{{this.name}}">
+    </div>
+    <div class="form-group">
+        <label for="code">code</label>
+        <input type="text" class="form-control" placeholder="Code" name="code" value="{{this.code}}">
+    </div>
+    <div class="form-group">
+        <label for="image">Image</label>
+        <input type="text" class="form-control" placeholder="Image" name="image" value="{{this.image}}">
+    </div>
+    <div class="form-group">
+        <label for="money">money</label>
+        <input type="text" class="form-control" placeholder="money" name="money" value="{{this.money}}">
+    </div>
+    <div class="form-group">
+        <label for="description">description</label>
+        <input type="text" class="form-control" placeholder="description" name="description" value="{{this.description}}">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

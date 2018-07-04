@@ -2,17 +2,17 @@ const mongoose = require('mongoose');
 const companySchema = new mongoose.Schema( {
     name: {
         type: String, 
-        required: [true, 'Name is fucking required'],
+        required: [true, 'Name is required and unique'],
         unique: true
     },
     code: {
         type: String, 
-        required: [true, 'Code is fucking required']
+        required: [true, 'Code is required']
     }, 
 
     image: {
         type: String, 
-        required: [true, 'Image is fucking required']
+        required: [true, 'Image is required']
 
     },
 
@@ -27,7 +27,7 @@ const companySchema = new mongoose.Schema( {
         maxlength: 100
     },
 
-})
+});
 
 module.exports = mongoose.model('Company', companySchema);
 

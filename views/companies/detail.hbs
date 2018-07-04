@@ -1,0 +1,16 @@
+<div class="row">
+    <a href="/companies">Go back</a>
+    <div class="col-sm-6 col-md-4">
+        <div style="width: 300px;" class="thumbnail">
+            <div class="caption">
+                <img src="{{company.image}}" alt="image" class="width:200;">
+                <h1>{{company.name}}</h1>
+                <h3>{{company.code}}</h3>
+                <h3>Net worth: {{company.money}}</h3>
+                <form action="/companies/{{company.id}}/delete" method="POST">
+                    <button class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
